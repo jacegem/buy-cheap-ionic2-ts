@@ -21,9 +21,11 @@
       <ion-refresher-content pullingIcon="arrow-down" pullingText="PULL_TO_REFRESH" refreshingSpinner="circles" refreshingText="REFRESHING">
       </ion-refresher-content>
     </ion-refresher>
+
     <ion-item *ngIf="itemList.length == 0">
       <ion-spinner></ion-spinner>데이터 조회중 입니다.
     </ion-item>
+
     <ion-item-sliding *ngFor="let item of itemList" [hidden]="item.hide">
       <button full ion-item (click)="openLink(item)">
         <img class="small" item-left src="{{item.imgSrc | default: 'https://goo.gl/XaKTWs'}}" onerror="this.src='https://goo.gl/XaKTWs'"/>
@@ -38,9 +40,11 @@
             </p>
         </button>
     </ion-item-sliding>
+
     <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
       <ion-infinite-scroll-content></ion-infinite-scroll-content>
     </ion-infinite-scroll>
+
   </ion-list>
 
 </ion-content>

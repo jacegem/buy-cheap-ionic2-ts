@@ -13,7 +13,7 @@ import { ShopPage } from '../shop/shop';
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/shop-overseas/shop-overseas.html'
+  templateUrl: 'build/pages/shop-overseas/shop-overseas.html'  
   , pipes: [[Shortdate], [Default]]
 })
 export class ShopOverseasPage extends ShopPage {
